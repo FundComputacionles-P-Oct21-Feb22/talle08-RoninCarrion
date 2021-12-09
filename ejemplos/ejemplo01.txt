@@ -4,10 +4,16 @@
 //  El objetivo del proceso es encontrar la suma de todas las notas de los dos
 //  estudiantes
 //  Analizar el código y pasar la solución a una con el uso del ciclo Mientras
+//  En el siguiente ejemplo se tiene dos arreglos, mismo que se usan
+//  para guardar las notas de dos estudiantes.
+//  Cada uno de los arreglos tienen ya dados sus valores iniciales
+//  El objetivo del proceso es encontrar la suma de todas las notas de los dos
+//  estudiantes
+
 1.  Inicio
 2.  (notasEstudiante1(3),i[0-n])
 3.  (notasEstudiante2(3),i[0-n])
-4.  indice, i[0-n]
+4.  indice, i[0-n] <-- 0
 5.  suma, i[0-n] <-- 0
 6.  notasEstudiantes1[0] <-- 9
 7.  notasEstudiantes1[1] <-- 10
@@ -15,11 +21,30 @@
 9.  notasEstudiantes2[0] <-- 8
 10. notasEstudiantes2[1] <-- 9
 11. notasEstudiantes2[2] <-- 10
-12. Para(indice<--0, indice<3, 1) haga
-13.   suma <- suma + notasEstudiante1[i]
-14.   suma <- suma + notasEstudiante2[i]
-15. Fin_Para
+12. para(indice <-- 0, indice < 3, 1) haga // 0<3 V // 1<3 V // 2 < 3 V // 3 < 3 F (salgo del ciclo)
+13.   suma <- suma + notasEstudiante1[i]   // 0 + 9 = 9 // 17 + 10 = 27 // 36 + 7 = 43 
+14.   suma <- suma + notasEstudiante2[i]   // 9 + 8 = 17 // 27 + 9 = 36 // 43 + 10 = 53
+15. Fin_mientras
 16. Escribir suma
 17. Fin
 
 // Solución ciclo Mientras
+
+1.  Inicio
+2.  (notasEstudiante1(3),i[0-n])
+3.  (notasEstudiante2(3),i[0-n])
+4.  indice, i[0-n] <-- 0
+5.  suma, i[0-n] <-- 0
+6.  notasEstudiantes1[0] <-- 9
+7.  notasEstudiantes1[1] <-- 10
+8.  notasEstudiantes1[2] <-- 7
+9.  notasEstudiantes2[0] <-- 8
+10. notasEstudiantes2[1] <-- 9
+11. notasEstudiantes2[2] <-- 10
+12. Mientras(indice < 3) entonces                  // 0<3 V // 1<3 V // 2 < 3 V // 3 < 3 F (salgo del ciclo)
+13.   suma <- suma + notasEstudiante1[indice]       // 0 + 9 = 9 // 17 + 10 = 27 // 36 + 7 = 43
+14.   suma <- suma + notasEstudiante2[indice]       // 9 + 8 = 17 // 27 + 9 = 36 // 43 + 10 = 53
+15.   indice <-- indice + 1                    // 0 // 1 // 2 // 3
+16. Fin_mientras
+17. Escribir suma // 53
+18. Fin

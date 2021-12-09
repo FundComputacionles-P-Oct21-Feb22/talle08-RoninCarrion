@@ -1,8 +1,8 @@
 
 //  En el siguiente ejemplo se tiene un arreglo, mismo que se usa
 //  para guardar las notas de un estudiantes, variable notasEstudiante
-//  Además, se tiene una variable de tipo arreglo de cadena, de mismo tamaño
-//  del arreglo notasEstudianteCualitativo
+//  Además, se tiene una variable de tipo arreglo de cadena(notasEstudianteCualitativo), de mismo tamaño
+//  del arreglo notasEstudiante
 //  Analizar el código llenar el arreglo notasEstudianteCualitativo en función
 //  de las notasEstudiante. Se corresponden las posiciones; la posición 0 del
 //  arreglo notasEstudiante se corresponde con la posición 0 del arreglo notasEstudianteCualitativo
@@ -15,14 +15,15 @@
 5.  notasEstudiante[0] <-- 8
 6.  notasEstudiante[1] <-- 5
 7.  notasEstudiante[2] <-- 2
+    
+    
 8.  Para(indice<--0, indice<3, 1) haga
 9.    Escribir notasEstudiante[indice]
+10. 	Si( notasEstudiante[indice] >= 0 AND notasEstudiante[indice] <= 5)entonces
+		notasEstudianteCualitativo[indice] <-- "Buena"
+	caso contrario
+		EstudianteCualitativo [indice] <-- "Mala"
+	Fin si
+	Escribir notasEstudiante[indice] + "es calificación -- " + notasEstudianteCualitativo[indice]
 14. Fin_Para
-15. // presenta el siguiente reporte
-    // 8 es calificación -- Buena
-    // 5 es calificación -- Mala
-    // 2 es calificación -- Mala
-15. Para(indice<--0, indice<3, 1) haga
-16.   //
-17. Fin_Para
 18. Fin
